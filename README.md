@@ -5,20 +5,21 @@ A clean and minimal Nord-themed Wayland setup using [**Niri**](https://github.co
 https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 
 ---
+## 🔧 Setup Includes
 
-## 🔧Setup Includes
+- [Niri](https://github.com/YaLTeR/niri)
+- [Nord Theme](https://www.nordtheme.com/)
+- [Neovim](https://neovim.io/)
+- [LazyVim](https://www.lazyvim.org/)
+- [Fish Shell](https://fishshell.com/)
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
+- [OBS Studio](https://obsproject.com/)
+- [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [Tofi](https://github.com/philj56/tofi)
+- [trmt](https://github.com/cenonym/trmt)
+- [Wallpapers](./.config/walls)
 
-- Niri (Wayland tiling WM)
-- Nord theme (system-wide)
-- Neovim (LazyVim-based)
-- Fish shell
-- Waybar
-- Kitty
-- OBS Studio config
-- Fastfetch
-- Wallpapers
-- Tofi
-- trmt
 
 ---
 
