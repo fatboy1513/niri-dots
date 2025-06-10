@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set_wallpaper_hyprland() {
-    dir="${HOME}/Pictures/Wallpapers"
+    dir="${HOME}/.config/walls"
     BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
     PROGRAM="swww-daemon"
     trans_type="grow"
