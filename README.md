@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 - [Tofi](https://github.com/philj56/tofi)
 - [trmt](https://github.com/cenonym/trmt)
 - [Wallpapers](./.config/walls)
-
+- [Startpage](https://addons.mozilla.org/en-US/firefox/addon/nord-inspired-startpage/)
 
 ---
 
