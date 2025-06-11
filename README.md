@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=8000&pause=1000&color=d8dee9&width=435&lines=❄️++Niri+%2B+Nord+Dots)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=33&duration=8000&pause=1000&color=D8DEE9&width=435&height=59&lines=%E2%9D%84%EF%B8%8F+Niri+%2B+Nord+Dots)](https://git.io/typing-svg)
 
 A clean and minimal Nord-themed Wayland setup using [**Niri**](https://github.com/YaLTeR/niri).
 
@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 
 ---
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=8000&pause=1000&color=5E81AC&width=435&lines=PROGRAMS USED)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=8000&pause=1000&color=5E81AC&width=435&lines=PROGRAMS+USED)](https://git.io/typing-svg)
 - [Niri](https://github.com/YaLTeR/niri)
 - [Nordic GTK](https://github.com/EliverLara/Nordic)
 - [Nordzy Icons](https://github.com/MolassesLover/Nordzy-icon)
