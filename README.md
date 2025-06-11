@@ -1,16 +1,17 @@
-# ❄️ Niri + Nord Dotfiles
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=8000&pause=1000&color=d8dee9&width=435&lines=❄️++Niri+%2B+Nord+Dots)](https://git.io/typing-svg)
 
 A clean and minimal Nord-themed Wayland setup using [**Niri**](https://github.com/YaLTeR/niri).
 
 https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 
 ---
-## 🔧 Setup Includes
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=8000&pause=1000&color=5E81AC&width=435&lines=PROGRAMS)](https://git.io/typing-svg)
 - [Niri](https://github.com/YaLTeR/niri)
+- [Nordic GTK](https://github.com/EliverLara/Nordic)
+- [Nordzy Icons](https://github.com/MolassesLover/Nordzy-icon)
 - [Nord Theme](https://www.nordtheme.com/)
 - [Neovim](https://neovim.io/)
-- [LazyVim](https://www.lazyvim.org/)
 - [Fish Shell](https://fishshell.com/)
 - [Waybar](https://github.com/Alexays/Waybar)
 - [Kitty](https://sw.kovidgoyal.net/kitty/)
@@ -18,14 +19,12 @@ https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [Tofi](https://github.com/philj56/tofi)
 - [trmt](https://github.com/cenonym/trmt)
-- [Wallpapers](./.config/walls)
 - [Startpage](https://addons.mozilla.org/en-US/firefox/addon/nord-inspired-startpage/)
+- [Wallpapers](./.config/walls)
 
 ---
 
-
-## 📁 Directory Structure
-
+ [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=8000&pause=1000&color=5E81AC&width=435&lines=DIRECTORIES)](https://git.io/typing-svg) 
 ```bash
 .config/
 ├── fastfetch       # System info
