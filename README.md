@@ -20,6 +20,7 @@ https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 - [Tofi](https://github.com/philj56/tofi)
 - [trmt](https://github.com/cenonym/trmt)
 - [Startpage](https://addons.mozilla.org/en-US/firefox/addon/nord-inspired-startpage/)
+- [Zen Browser](./.config/chrome)
 - [Wallpapers](./.config/walls)
 
 ---
@@ -35,5 +36,7 @@ https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 ├── superfile       # File manager
 ├── tofi            # Launcher
 ├── trmt            # Turing 
-├── walls           # Wallpapers
-└── waybar          # Status bar
+├── waybar          # Status bar
+├── chrome          # zen css
+└── walls           # Wallpapers          
+
