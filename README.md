@@ -24,6 +24,7 @@ https://github.com/user-attachments/assets/348390e6-b0ba-4512-a51f-7c3a20b6fcbd
 - [Zen Theme](https://addons.mozilla.org/en-US/firefox/addon/minimalist-nord/) [Zen CSS](./.config/chrome)
 - [Startpage](https://addons.mozilla.org/en-US/firefox/addon/nord-inspired-startpage/)
 - [Wallpapers](./.config/walls)
+- [hyprlock](https://github.com/hyprwm/hyprlock)
 
 ---
 

@@ -2,7 +2,11 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     //QT_QPA_PLATFORMTHEME "qt6ct"
     //QT_STYLE_OVERRIDE "kvantum"
-     GDK_SCALE "1.5"
+    GDK_SCALE "1.5"
+    http_proxy "http://127.0.0.1:7890"
+    https_proxy "http://127.0.0.1:7890"
+    all_proxy "http://127.0.0.1:7890"
+    no_proxy ""
 }
 
 overview {
@@ -30,14 +34,15 @@ layout {
     gaps 10
     background-color "transparent"
 
-    center-focused-column "never"
+    center-focused-column "always"
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 0.98
     }
 
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.98; }
     
     focus-ring {
         off
@@ -54,7 +59,6 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon" 
-spawn-at-startup  "$HOME/.config/walls/toggle-walls.sh"
 layer-rule {
     match namespace="waybar"
     match at-startup=true
@@ -116,10 +120,10 @@ draw-border-with-background false
 binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+RETURN hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty"; }
-    Mod+A hotkey-overlay-title="Run an Application: fuzzel" { spawn "bash" "-c" "tofi-drun --drun-launch=true || pkill tofi-drun"; }
+    Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "bash" "-c" "tofi-drun --drun-launch=true || pkill tofi-drun"; }
     Mod+E { spawn "kitty"  "spf"; }
-    Mod+Shift+W { spawn "bash" "-c" "$HOME/.config/walls/toggle-walls.sh"; }
+    Mod+Shift+W { spawn "bash" "-c" "$HOME/.config/walls/toggle-wallapper.sh"; }
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -130,21 +134,27 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--device=intel_backlight" "set" "5%-" ; }
 
     Mod+Tab repeat=false { toggle-overview; }
+    Mod+O repeat=false { toggle-overview; }
 
-    Mod+C { close-window; }
+    Mod+Q { close-window; }
 
-    Mod+J     { focus-column-left; }
-   	Mod+L     { focus-column-right; }
+    Mod+H     { focus-column-left; }
+    Mod+L     { focus-column-right; }
 
-    Mod+Shift+J     { move-column-left; }
+    Mod+Shift+H     { move-column-left; }
     Mod+Shift+L     { move-column-right; }
     
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
-     Mod+K     { focus-window-or-workspace-down; }
-     Mod+I     { focus-window-or-workspace-up; }
-     Mod+Shift+K     { move-window-down-or-to-workspace-down; }
-     Mod+Shift+I     { move-window-up-or-to-workspace-up; }
+     Mod+J     { focus-window-or-workspace-down; }
+     Mod+K     { focus-window-or-workspace-up; }
+     Mod+Shift+J     { move-window-down-or-to-workspace-down; }
+     Mod+Shift+K     { move-window-up-or-to-workspace-up; }
+
+     Mod+Left      { focus-column-left; }
+     Mod+Right     { focus-column-right; }
+     Mod+Down      { focus-window-or-workspace-down; }
+     Mod+Up        { focus-window-or-workspace-up; }
 
    // Mod+Home { focus-column-first; }
    // Mod+End  { focus-column-last; }
@@ -183,7 +193,7 @@ binds {
     //Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-	Mod+Ctrl+U         { move-column-to-workspace-down; }
+    Mod+Ctrl+U         { move-column-to-workspace-down; }
     //Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
@@ -192,8 +202,8 @@ binds {
 
     //Mod+Shift+Page_Down { move-workspace-down; }
     //Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+Ctrl+K      { move-workspace-down; }
-    Mod+Shift+Ctrl+I      { move-workspace-up; }
+    Mod+Shift+Ctrl+J      { move-workspace-down; }
+    Mod+Shift+Ctrl+K      { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -283,10 +293,10 @@ binds {
     Mod+Shift+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Alt+J { set-column-width "-10%"; }
-    Mod+Alt+L { set-column-width "+10%"; }
-    Mod+Alt+I { set-window-height "-10%"; }
-    Mod+Alt+K { set-window-height "+10%"; }
+    Mod+Alt+H { set-column-width "-5%"; }
+    Mod+Alt+L { set-column-width "+5%"; }
+    Mod+Alt+K { set-window-height "-10%"; }
+    Mod+Alt+J { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Space        { toggle-window-floating; }
@@ -311,4 +321,6 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+P { power-off-monitors; }
+
+    Mod+Ctrl+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
 }

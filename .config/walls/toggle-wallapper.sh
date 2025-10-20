@@ -1,16 +1,10 @@
 #!/bin/sh
 
 set_wallpaper_hyprland() {
-    dir="${HOME}/.config/walls"
-    BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
-    PROGRAM="swww-daemon"
-    trans_type="grow"
+    dir="${HOME}/.config/walls/"
+    img="$(find "$dir" -name '*.jpg' -o -name '*.jpeg' -o -name '*.png' -o -name '*.webp' | shuf -n1)"
 
-    if pgrep "$PROGRAM" >/dev/null; then
-        swww img "$BG" --transition-fps 240 --transition-type $trans_type --transition-duration 0.5
-    else
-        swww init && swww img "$BG" --transition-fps 244 --transition-type $trans_type --transition-duration 0.5
-    fi
+    swww img --resize="fit" "$img"
 }
 
 set_wallpaper_hyprland

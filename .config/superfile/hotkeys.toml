@@ -1,17 +1,17 @@
 # =================================================================================================
 # Global hotkeys (cannot conflict with other hotkeys)
 confirm = ['enter', 'right', 'l']
-quit = ['q', 'esc']
+quit = ['q', '']
 # movement
-list_up = ['up', 'i']
-list_down = ['down', 'k']
-page_up = ['pgup', '']
-page_down = ['pgdown', '']
+list_up = ['up', 'k']
+list_down = ['down', 'j']
+page_up = ['pgup', 'ctrl+u', '']
+page_down = ['pgdown', 'ctrl+f', '']
 # file panel control
 close_file_panel = ['w', '']
 create_new_file_panel = ['n', '']
 next_file_panel = ['tab', 'L']
-previous_file_panel = ['shift+left', 'J']
+previous_file_panel = ['shift+left', 'H']
 toggle_file_preview_panel = ['f', '']
 open_sort_options_menu = ['o', '']
 toggle_reverse_sort = ['R', '']
@@ -49,7 +49,7 @@ confirm_typing = ['enter', '']
 cancel_typing = ['ctrl+c', 'esc']
 # =================================================================================================
 # Normal mode hotkeys (can conflict with other modes, cannot conflict with global hotkeys)
-parent_directory = ['j', 'left', 'backspace']
+parent_directory = ['h', 'left', 'backspace']
 search_bar = ['/', '']
 # =================================================================================================
 # Select mode hotkeys (can conflict with other modes, cananot conflict with global hotkeys)
