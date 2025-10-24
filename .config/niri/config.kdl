@@ -142,11 +142,31 @@ window-rule {
     opacity 0.95
 }
 
+window-rule {
+    match app-id="flameshot"
+    open-floating true
+}
+window-rule {
+    //match app-id="flameshot"
+    match title="^flameshot-pin$"
+    opacity 0.7
+    open-floating true
+    border {
+        // Same as focus-ring.
+        width 0
+    }
+}
+window-rule {
+    match app-id="flameshot"
+    exclude title="^Capture Launcher$"
+    
+}
+
 binds {
 
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: tofi" { spawn "bash" "-c" "tofi-drun --drun-launch=true || pkill tofi-drun"; }
+    Mod+T hotkey-overlay-title="Run an Application: tofi" { spawn "bash" "-c" "tofi-drun --drun-launch=true || pkill tofi-drun"; }
     Mod+E { spawn "kitty"  "spf"; }
     Mod+Shift+W { spawn "bash" "-c" "$HOME/.config/walls/toggle-wallapper.sh"; }
     // Example volume keys mappings for PipeWire & WirePlumber.
@@ -165,13 +185,20 @@ binds {
 
     Mod+M     { spawn "~/.config/niri/toggle-center-custom.sh"; }
 
+    Mod+S     { focus-window-or-workspace-down; }
+    Mod+W     { focus-window-or-workspace-up; }
+    Mod+A     { focus-column-left; }
+    Mod+D     { focus-column-right; }
+
     Mod+J     { focus-window-or-workspace-down; }
     Mod+K     { focus-window-or-workspace-up; }
     Mod+H     { focus-column-left; }
     Mod+L     { focus-column-right; }
 
-    Mod+Shift+J     { move-window-down-or-to-workspace-down; }
-    Mod+Shift+K     { move-window-up-or-to-workspace-up; }
+    //Mod+Shift+J     { move-window-down-or-to-workspace-down; }
+    //Mod+Shift+K     { move-window-up-or-to-workspace-up; }
+    Mod+Shift+J     { move-window-to-workspace-down; }
+    Mod+Shift+K     { move-window-to-workspace-up; }
     Mod+Shift+H     { move-column-left; }
     Mod+Shift+L     { move-column-right; }
 
@@ -334,7 +361,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    //Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -344,7 +371,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Shift+S { screenshot; }
+    Mod+Ctrl+A { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
