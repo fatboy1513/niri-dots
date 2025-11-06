@@ -1,0 +1,8 @@
+{
+  "commandRunner": {
+    "enabled": true,
+    "history": [
+      "kitty"
+    ]
+  }
+}
